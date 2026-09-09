@@ -52,3 +52,4 @@ npx netlify deploy --dir=. --prod
 ## Claims
 
 Scoreboard metrics are **design intent / targets**, not certified results. See `NOTES.md`.
+
