@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phyto-Fortress 8'x16' — Kit Overview & Assembly Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Public+Sans:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --charcoal:#1c1b18;
+    --cream:#f4efe4;
+    --bronze:#a9713e;
+    --bronze-dark:#7a4f28;
+    --forest:#2f4d34;
+    --forest-dark:#1e3322;
+    --line:#d8d0bc;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--charcoal);
+    font-family:'Public Sans', Arial, sans-serif;
+    line-height:1.55;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces', Georgia, serif;
+    font-weight:600;
+    color:var(--forest-dark);
+    margin:0 0 .4em;
+  }
+  .wrap{max-width:820px;margin:0 auto;padding:2.5rem 1.5rem 4rem;}
+  header.hero{
+    background:var(--forest-dark);
+    color:var(--cream);
+    padding:2.5rem 1.5rem;
+    text-align:center;
+  }
+  header.hero h1{color:var(--cream);font-size:2rem;margin-bottom:.2em;}
+  header.hero p{color:var(--line);font-size:1rem;margin:0;}
+  .badge{
+    display:inline-block;
+    background:var(--bronze);
+    color:var(--cream);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.75rem;
+    letter-spacing:.04em;
+    padding:.25em .7em;
+    border-radius:3px;
+    margin-top:.8em;
+  }
+  .nav-back{
+    display:block;
+    text-align:center;
+    margin-top:1rem;
+    font-size:.85rem;
+  }
+  .nav-back a{color:var(--line);text-decoration:underline;}
+  section{margin:2.5rem 0;}
+  .spec-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+    margin-top:1rem;
+  }
+  .spec-cell{
+    background:var(--cream);
+    padding:.9rem 1rem;
+  }
+  .spec-cell .label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.7rem;
+    text-transform:uppercase;
+    letter-spacing:.05em;
+    color:var(--bronze-dark);
+  }
+  .spec-cell .value{font-size:.95rem;margin-top:.2em;}
+  table{width:100%;border-collapse:collapse;margin-top:1rem;font-size:.92rem;}
+  th,td{
+    text-align:left;
+    padding:.55rem .7rem;
+    border-bottom:1px solid var(--line);
+    vertical-align:top;
+  }
+  th{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.72rem;
+    text-transform:uppercase;
+    letter-spacing:.04em;
+    color:var(--bronze-dark);
+    border-bottom:2px solid var(--bronze);
+  }
+  .bom-group-title{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.75rem;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    color:var(--forest);
+    margin:1.4rem 0 .3rem;
+    border-left:3px solid var(--bronze);
+    padding-left:.6rem;
+  }
+  ol.steps{counter-reset:step;list-style:none;padding:0;margin-top:1rem;}
+  ol.steps li{
+    counter-increment:step;
+    position:relative;
+    padding:.7rem 0 .7rem 2.6rem;
+    border-bottom:1px solid var(--line);
+  }
+  ol.steps li:last-child{border-bottom:none;}
+  ol.steps li::before{
+    content:counter(step);
+    position:absolute;
+    left:0;top:.55rem;
+    width:1.7rem;height:1.7rem;
+    background:var(--forest-dark);
+    color:var(--cream);
+    border-radius:50%;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.85rem;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .step-title{font-weight:600;margin-bottom:.15em;}
+  .note{
+    background:#efe7d2;
+    border-left:3px solid var(--bronze);
+    padding:.8rem 1rem;
+    font-size:.88rem;
+    margin-top:1rem;
+  }
+  .tier-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:1rem;
+    margin-top:1rem;
+  }
+  .tier-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-top:4px solid var(--bronze);
+    padding:1rem 1.1rem;
+  }
+  .tier-card h3{font-size:1rem;margin-bottom:.4em;}
+  .tier-card p{font-size:.87rem;margin:0;color:#4a4640;}
+  .illus-slot{
+    border:1px dashed var(--bronze);
+    background:#fff;
+    padding:1.2rem 1rem;
+    margin-top:1rem;
+    text-align:center;
+    color:#6b665c;
+    font-size:.9rem;
+  }
+  .source-note{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.75rem;
+    color:#6b665c;
+    border-top:1px solid var(--line);
+    margin-top:3rem;
+    padding-top:1rem;
+  }
+  footer{
+    text-align:center;
+    padding:1.5rem;
+    background:var(--forest-dark);
+    color:var(--line);
+    font-size:.85rem;
+  }
+  footer a{color:var(--cream);}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <h1>Phyto-Fortress™</h1>
+  <p>8' × 16' portable, monolithic hemp-geopolymer shelter kit</p>
+  <span class="badge">Design Package Rev 1.0 — Development Specifications</span>
+  <p class="nav-back"><a href="index.html#kit">← Back to Phyto-Board site</a></p>
+</header>
+
+<div class="wrap">
+
+  <section>
+    <h2>Overview</h2>
+    <p>The Phyto-Fortress is the first building-scale demonstration of the Phyto-board® system: a timber skeleton carries the structural load, a reactive hemp-hurd geopolymer infill fills and locks the envelope together, and Phyto-board panels form the continuous interior and exterior skins. It ships as a shell — framed openings, skid base, and core envelope complete — with doors, glazing, HVAC, and interior fit-out left to the installer.</p>
+  </section>
+
+  <section>
+    <h2>How it bonds</h2>
+    <p>The reactive hemp-hurd geopolymer isn't a filler poured into a cavity — it's a chemical bonding system. The underlying chemistry class starts from five inputs: hemp hurd, crystalline silica, silanes, lime, and metakaolin.</p>
+
+    <table>
+      <tr><th>Step</th><th>Reaction</th></tr>
+      <tr><td>1. Surface preparation</td><td>Hydroxyl (–OH) groups on hemp hurd and silanol (Si–OH) groups on silica become available for bonding</td></tr>
+      <tr><td>2. Silane coupling</td><td>Silanes hydrolyze and bridge — one end bonds to hemp hurd, the other to silica</td></tr>
+      <tr><td>3. Lime activation</td><td>Lime dissolves, releasing Ca²⁺ and OH⁻, raising pH to activate silica and metakaolin surfaces</td></tr>
+      <tr><td>4. Pozzolanic reaction</td><td>Metakaolin dissolves in the high-pH environment; Si and Al species react with Ca²⁺ to form C-S-H and C-A-H hydrates</td></tr>
+      <tr><td>5. Matrix formation</td><td>Hydrate gels grow and encapsulate the hemp hurd and silica, filling pores into a dense, low-porosity matrix</td></tr>
+    </table>
+
+    <p class="note">Phyto-board's production formulation extends this baseline chemistry with additional coupling agents and activation chemistry, produced under in-process quality assurance controls, to reliably yield the HD, MD, and LT density grades used across the panel and Phyto-Fortress product lines.</p>
+  </section>
+
+  <section>
+    <h2>Kit specifications</h2>
+    <div class="spec-grid">
+      <div class="spec-cell"><div class="label">Footprint</div><div class="value">8 ft × 16 ft</div></div>
+      <div class="spec-cell"><div class="label">Wall thickness</div><div class="value">~10 in <span style="font-size:.75rem;color:#6b665c">(target)</span></div></div>
+      <div class="spec-cell"><div class="label">Floor thickness</div><div class="value">~6 in <span style="font-size:.75rem;color:#6b665c">(target)</span></div></div>
+      <div class="spec-cell"><div class="label">Roof thickness</div><div class="value">10–12 in (nominal)</div></div>
+      <div class="spec-cell"><div class="label">Base</div><div class="value">Timber skid, steel-runner reinforced</div></div>
+      <div class="spec-cell"><div class="label">Wind resistance</div><div class="value">100 mph <span style="font-size:.75rem;color:#6b665c">(design intent)</span></div></div>
+      <div class="spec-cell"><div class="label">Doors</div><div class="value">1 (pre-cut, framed opening)</div></div>
+      <div class="spec-cell"><div class="label">Windows</div><div class="value">High-cut impact windows, all 4 walls</div></div>
+    </div>
+    <p class="note">Panel and wall-thickness figures are development targets pending final engineering (structural, thermal, fire). Tolerances: panel thickness ±1/16 in, panel length/width ±1/4 in, out-of-plumb ±1/4 in per 10 ft. Wind/impact values are design intent until confirmed by testing.</p>
+  </section>
+
+  <section>
+    <h2>Wall build-up (exterior → interior)</h2>
+    <table>
+      <tr><th>Layer</th><th>Material</th><th>Function</th></tr>
+      <tr><td>1</td><td>HD Phyto-board exterior panel</td><td>Hydrophobic, impact- and weather-resistant surface</td></tr>
+      <tr><td>2</td><td>Offset 2×4 timber frame</td><td>Structural load path, thermal break</td></tr>
+      <tr><td>3</td><td>Reactive hemp-hurd geopolymer infill</td><td>Monolithic structural/insulating core, bonds to lumber and skins</td></tr>
+      <tr><td>4</td><td>Offset 2×4 timber frame (interior side)</td><td>Structural load path, thermal break</td></tr>
+      <tr><td>5</td><td>MD Phyto-board interior panel</td><td>Interior structural finish surface</td></tr>
+    </table>
+    <p class="note">Offset framing on both faces leaves a continuous geopolymer core between them — this uninterrupted infill is what makes the wall act as one monolithic composite rather than a layered assembly.</p>
+  </section>
+
+  <section id="illustrations">
+    <h2>Assembly diagrams &amp; illustrations</h2>
+    <div class="illus-slot">
+      Diagrams and illustration links will land here when provided.<br>
+      (Wall section · skid base · corner molds · tier overlays)
+    </div>
+  </section>
+
+  <section>
+    <h2>Bill of materials</h2>
+
+    <div class="bom-group-title">Structural members</div>
+    <table>
+      <tr><th>Item</th><th>Spec</th></tr>
+      <tr><td>Timber / engineered wood framing</td><td>2×4, offset dual-frame per wall/roof/floor stack</td></tr>
+      <tr><td>Skid base</td><td>8' × 16' timber skid, 9043-coated steel runners</td></tr>
+      <tr><td>Corner lifting / tie-down hardware</td><td>Integrated at skid corners</td></tr>
+    </table>
+
+    <div class="bom-group-title">Phyto-board panels</div>
+    <table>
+      <tr><th>Item</th><th>Spec</th></tr>
+      <tr><td>HD exterior panel</td><td>4' × 8', 5/8", light orange dye, hydrophobic</td></tr>
+      <tr><td>MD interior panel</td><td>4' × 8', 5/8", dark blue dye</td></tr>
+    </table>
+
+    <div class="bom-group-title">Geopolymer materials</div>
+    <table>
+      <tr><th>Item</th><th>Spec</th></tr>
+      <tr><td>Hemp hurd</td><td>Regionally processed, packaged in 40 lb vacuum bags</td></tr>
+      <tr><td>Crystalline silica (SiO₂)</td><td>Reactive filler / network strength</td></tr>
+      <tr><td>Silanes (organofunctional)</td><td>Coupling agent — bridges hemp hurd and silica/alumina</td></tr>
+      <tr><td>Lime (Ca(OH)₂)</td><td>pH activation, pozzolanic reaction</td></tr>
+      <tr><td>Metakaolin</td><td>Aluminosilicate binder component</td></tr>
+      <tr><td>Quikcrete or equivalent</td><td>Sourced locally at assembly site — not shipped</td></tr>
+    </table>
+
+    <div class="bom-group-title">Connections &amp; fasteners</div>
+    <table>
+      <tr><th>Item</th><th>Spec</th></tr>
+      <tr><td>Structural connectors</td><td>Conventional, per engineering spec</td></tr>
+      <tr><td>Hurricane straps</td><td>Top plate to roof structure (Intermediate/Tier One)</td></tr>
+      <tr><td>Reinforced anchor connections</td><td>At skid</td></tr>
+    </table>
+
+    <div class="bom-group-title">Molds / forms</div>
+    <table>
+      <tr><th>Item</th><th>Spec</th></tr>
+      <tr><td>Small radius corner mold</td><td>R 1½" (38 mm), one-piece, reusable</td></tr>
+      <tr><td>Large radius corner mold</td><td>R 6" (152 mm), split/reusable</td></tr>
+    </table>
+
+    <div class="bom-group-title">Hardware, vapor barrier, and tools</div>
+    <table>
+      <tr><th>Item</th><th>Spec</th></tr>
+      <tr><td>Fasteners</td><td>Per assembly guide</td></tr>
+      <tr><td>Vapor / weather components</td><td>As required by climate configuration</td></tr>
+      <tr><td>Tools &amp; accessories</td><td>Mix, placement, and finishing tools (kit-supplied)</td></tr>
+      <tr><td>Doors / windows / glazing</td><td>Kit-supplied hardware; install by local labor</td></tr>
+    </table>
+
+    <div class="bom-group-title">Documentation &amp; packaging</div>
+    <table>
+      <tr><th>Item</th><th>Spec</th></tr>
+      <tr><td>Assembly guide</td><td>Included, sequence-numbered</td></tr>
+      <tr><td>Component packaging</td><td>Organized by assembly sequence and identification tags</td></tr>
+    </table>
+
+    <p class="note">Not shipped — sourced locally at the build site: water and Quikcrete (or equivalent) for geopolymer mixing, and local assembly labor.</p>
+  </section>
+
+  <section>
+    <h2>Assembly sequence</h2>
+    <ol class="steps">
+      <li>
+        <div class="step-title">Set the skid foundation</div>
+        Position the 8' × 16' timber skid with steel runners on a level, drained base (concrete or naturally firm foundation). Confirm sill gasket / moisture barrier is in place.
+      </li>
+      <li>
+        <div class="step-title">Erect the timber skeleton</div>
+        Assemble the offset 2×4 wall, roof, and floor framing per the numbered kit sequence. This frame carries the full structural load — panels and infill do not.
+      </li>
+      <li>
+        <div class="step-title">Install Phyto-board panels</div>
+        Place HD exterior panels first, then MD interior panels, on the framed skeleton — leaving the continuous cavity between them for infill.
+      </li>
+      <li>
+        <div class="step-title">Place and secure corner molds</div>
+        Fit the reusable radius-corner molds (small or large radius, per spec) at each vertical corner and transition before pouring infill.
+      </li>
+      <li>
+        <div class="step-title">Mix and place geopolymer infill</div>
+        Mix hemp hurd, silica, silanes, lime, and metakaolin with locally sourced water per the kit's mix ratios. Place into the wall/roof/floor cavities and compact.
+      </li>
+      <li>
+        <div class="step-title">Cure</div>
+        Allow the reactive infill to cure per the assembly guide's schedule before removing molds or loading the structure.
+      </li>
+      <li>
+        <div class="step-title">Remove molds, finish corners</div>
+        Strip corner molds once cured. Corner is now complete and part of the continuous structural envelope.
+      </li>
+      <li>
+        <div class="step-title">Install openings and utilities</div>
+        Fit doors, windows, and any specified vapor/weather components. Route service penetrations through sealed, compatible fittings.
+      </li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Kit tiers</h2>
+    <div class="tier-grid">
+      <div class="tier-card">
+        <h3>Basic</h3>
+        <p>Economical timber-frame shell with Phyto-board envelope and simple skid connection.</p>
+      </div>
+      <div class="tier-card">
+        <h3>Intermediate</h3>
+        <p>Adds hemp scrim reinforcement, hurricane straps, stronger opening blocking, and reinforced anchor connections.</p>
+      </div>
+      <div class="tier-card">
+        <h3>Tier One</h3>
+        <p>Adds a protected internal steel storm core with reinforced opening frame, roof tie rail, diagonal tension strap, and steel-reinforced sill connection.</p>
+      </div>
+    </div>
+  </section>
+
+  <p class="source-note">
+    Specifications compiled from Phyto-Board design package materials (Rev 1.0, 14 Aug 2025) and the 8×16 Phyto-Fortress kit diagrams. Panel thickness shown at 5/8" for this pamphlet; final thickness and density are engineered per site conditions and load requirements. Wall/roof/floor totals marked "nominal" are subject to structural, thermal, fire, and code-compliance testing — confirm current values before publishing to a formal spec sheet or grant submission.
+  </p>
+
+</div>
+
+<footer>
+  Phyto-Board — Sustainable Building Materials · <a href="https://phyto-board.com">phyto-board.com</a>
+  · <a href="index.html#kit">Site kit section</a>
+</footer>
+
+</body>
+</html>
